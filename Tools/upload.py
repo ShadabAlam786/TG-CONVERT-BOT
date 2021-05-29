@@ -13,7 +13,7 @@ from translation import Translation
 async def upload_video(c, m, send, media_location, thumb_image_path, duration, width, height):
       await send.edit(Translation.UPLOAD_START)
       c_time = time.time()
-      if m.text == "/converttovideo":
+      if m.text == "/CTV":
          await c.send_video(
                 chat_id=m.chat.id,
                 video=media_location,
@@ -30,7 +30,7 @@ async def upload_video(c, m, send, media_location, thumb_image_path, duration, w
                     c_time
                 )
          )
-      if m.text == "/converttofile":
+      if m.text == "/CTF":
          await c.send_document(
                 chat_id=m.chat.id,
                 document=media_location,
