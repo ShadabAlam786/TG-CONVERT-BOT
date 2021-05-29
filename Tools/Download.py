@@ -58,7 +58,7 @@ async def download(c, m):
                 except:
                     pass
             if mes == None:
-                if m.text == "/converttovideo":
+                if m.text == "/CTV":
                     if metadata.has("duration"):
                         duration = metadata.get('duration').seconds
                         thumb_image_path = await take_screen_shot(
@@ -69,7 +69,7 @@ async def download(c, m):
                                 duration - 1
                             )
                         )
-                if m.text == "/converttofile":
+                if m.text == "/CTF":
                     thumb_image_path = None
         logger.info(thumb_image_path)
         if thumb_image_path is not None:
