@@ -44,13 +44,9 @@ async def help_cb(c, m):
     await m.message.reply_to_message.delete()
  
   @Client.on_callback_query(filters.regex('^about$'))
-
-async def about_cb(c, m):
-
+  async def about_cb(c, m):
     await m.answer()
-
     owner = await c.get_users(int(OWNER_ID))
-
     bot = await c.get_me()
 
     # about text
@@ -99,9 +95,6 @@ async def about_cb(c, m):
     )
 
 @Client.on_callback_query(filters.regex('^home$'))
-
 async def home_cb(c, m):
-
     await m.answer()
-
     await start(c, m, cb=True)
