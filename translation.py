@@ -3,9 +3,9 @@ class Translation(object):
 
 #This will be appeared when anyone use start command
 
-      START = """😊 Hello Dear {0}
+      START = """**😊 Hello Dear {0}
 
-🔍 I Can Convert File To Video or Video to File With Custom Thumbnail Support.\n\n💥 For More Datils See Help.
+🔍 I Can Convert File To Video or Video to File With Custom Thumbnail Support.\n\n💥 For More Details See Help.**
 """
 
 
@@ -85,11 +85,11 @@ You access will be revoke by tomorrow"""
 
 
 
-      DOWNLOAD_START = "📥 Trying to Download In Bot Server."
-      DOWNLOAD_COMPLETE = "✅ Media Downloaded Successfully.\n📤 Preparing For Upload."
-      UPLOAD_START = "📤 Trying to Upload..."
-      UPLOAD_COMPLETE = "😊 Thanks For Using Our Bot."
-      SAVED_CUSTOM_THUMB_NAIL = "✅ Saved Thumbnail Successfully. This Will Be Deleted In 24 Hours."
-      BANNED_TEXT = "⛔ You Are Banned. So Your Are Not Able To Use Me."
-      REPLY_TEXT = "💥 Reply To The Media Which You Need To Convert."
-      DEL_ETED_CUSTOM_THUMB_NAIL = "🗑 Thumbnail Deleted Successfully."
+      DOWNLOAD_START = "**📥 Trying to Download In Bot Server.**"
+      DOWNLOAD_COMPLETE = "**✅ Media Downloaded Successfully.\n📤 Preparing For Upload.**"
+      UPLOAD_START = "**📤 Trying to Upload...**"
+      UPLOAD_COMPLETE = "**😊 Thanks For Using Our Bot.**"
+      SAVED_CUSTOM_THUMB_NAIL = "**✅ Saved Thumbnail Successfully. This Will Be Deleted In 24 Hours.**"
+      BANNED_TEXT = "**⛔ You Are Banned. So Your Are Not Able To Use Me.**"
+      REPLY_TEXT = "**💥 Reply To The Media Which You Need To Convert.**"
+      DEL_ETED_CUSTOM_THUMB_NAIL = "**🗑 Thumbnail Deleted Successfully.**"
