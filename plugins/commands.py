@@ -110,3 +110,20 @@ async def login(c, m):
                                  disable_web_page_preview=True,
                                  reply_to_message_id=m.message_id,
                                  parse_mode="markdown")
+            
+           
+
+@Client.on_callback_query(filters.regex('^about$'))
+
+async def home_cb(c, m):
+
+    await m.answer()
+
+    await start(c, m, cb=True)
+        if cb:
+
+        return await m.message.edit(text=Translation.ABOUT,
+
+                   reply_markup=InlineKeyboardMarkup(buttons)
+
+               )
