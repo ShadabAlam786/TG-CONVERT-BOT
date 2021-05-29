@@ -70,11 +70,11 @@ You access will be revoke by tomorrow"""
 #DON'T CHANGE THE NUMBERS IN THE FLOWER BRACKETS AND THE ORDER OF PERCENTAGE, DONE, TOTAL, SPEED, ETA ONLY CHANGE THE THEME 
 
       PROGRESS = """
-**💠 Percentage : {0}%
-✅ Done : {1}
-🔍 Total : {2}
-💥 Speed : {3}/s
-⌛ Time Left : {4}
+**💠 Percentage : {0}%\n
+✅ Done : {1}\n
+🔍 Total : {2}\n
+💥 Speed : {3}/Seconds\n
+⌛ Time Left : {4}\n
 **"""
        
       DOWNLOAD_PROGRESS = "▪️"
@@ -88,7 +88,7 @@ You access will be revoke by tomorrow"""
       DOWNLOAD_START = "**📥 Trying to Download In Bot Server.**"
       DOWNLOAD_COMPLETE = "**✅ Media Downloaded Successfully.\n📤 Preparing For Upload.**"
       UPLOAD_START = "**📤 Trying to Upload...**"
-      UPLOAD_COMPLETE = "**😊 Thanks For Using Our Bot.**"
+      UPLOAD_COMPLETE = "**😊 Thanks For Using Our @Convert_MS_Bot.**"
       SAVED_CUSTOM_THUMB_NAIL = "**✅ Saved Thumbnail Successfully. This Will Be Deleted In 24 Hours.**"
       BANNED_TEXT = "**⛔ You Are Banned. So Your Are Not Able To Use Me.**"
       REPLY_TEXT = "**💥 Reply To The Media Which You Need To Convert.**"
