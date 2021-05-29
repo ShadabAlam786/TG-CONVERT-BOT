@@ -7,10 +7,10 @@
     "Convert",
     "Bot"
   ],
-  "logo": "https://telegra.ph/file/7f3b556164324610e21a6.jpg",
-  "success_url": "https://telegram.dog/convert_Ns_bot",
-  "website": "https://github.com/Ns-AnoNymouS/TG-CONVERT-BOT",
-  "repository": "https://github.com/Ns-AnoNymouS/TG-CONVERT-BOT",
+  "logo": "https://telegra.ph/file/555b2e24c6d81bc735ef5.jpg",
+  "success_url": "https://telegram.dog/Convert_MS_Bot",
+  "website": "https://github.com/ShadabAlam786/TG-CONVERT-BOT",
+  "repository": "https://github.com/ShadabAlam786/TG-CONVERT-BOT",
   "env": {
     "WEBHOOK": {
       "description": "Setting this to ANYTHING will enable webhooks when in env mode",
@@ -21,8 +21,8 @@
       "value": ""
     },
     "USER_NAME": {
-      "description": "Your name like @NS_AnoNymouS",
-      "value": "@NS_AnoNymouS"
+      "description": "Your name like @Shadab_Alam",
+      "value": "@Shadab_Alam"
     },
     "BOT_PASSWORD": {
       "description": "Password for using this bot. If you don't set any password bot can be used as public",
@@ -39,7 +39,7 @@
     },
     "AUTH_USERS": {
       "description": "allow only pre-defined users to use this bot",
-      "value": "1337144652"
+      "value": "1299920908"
     },
     "BANNED_USERS": {
       "description": "Banned Unwanted members..",
