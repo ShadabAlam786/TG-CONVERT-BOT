@@ -15,7 +15,6 @@ my_father = "https://t.me/Shadab_Alam"
 support = "https://telegram.dog/MSBOTCREATERS"
 
 @Client.on_message(Filters.command(["start"]) & Filters.incoming & Filters.private)
-
 async def start(c, m, cb=False):
 
     if not cb:
