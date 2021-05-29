@@ -3,45 +3,38 @@ class Translation(object):
 
 #This will be appeared when anyone use start command
 
-      START = """Hello {0}
+      START = """😊 Hello Dear {0}
 
-I am a converter clone of [Convert Ns Bot](https://telegram.dog/convert_Ns_bot) by {1}
-
-I can convert file to video or video to file with custom thumbnail support.
+🔍 I Can Convert File To Video or Video to File With Custom Thumbnail Support.\n\n💥 For More Datils See Help.
 """
 
 
 #This will be appeared when anyone use help command
 
-      HELP = """**Hey you need help 🤔 ?**
+      HELP = """**💥 Hey You Need Help ?**
 
-1. Send me the telegram file or video which you wanted to convert.
+**1. Send Me The Telegram File Or Video Which You Wanted To Convert.
 
-2. Send me the thumbnail(photo) optional.
+2. Send Me The Thumbnail [ Photo ]. [ Optional ]
 
-3. Reply to video /converttofile for converting into file.
+3. Reply To Video /CTF For Converting Into File.
 
-4. Reply to file /converttovideo for converting into video.
+4. Reply To File /CTV For Converting Into Video.**
 
-**SUPPORT GROUP:** [NS Bot Supporters](https://telegram.dog/Ns_Bot_supporters)
+**🔍 Support Channel :** [MS Bot Updates](https://telegram.dog/MSBOTCREATERS)
 """
 
 
 #Please don't change this about command 🙏
 
       ABOUT = """
-**📝 Language:** Python 3
+**📝 Language : Python 3**
 
-**🧰 Framework:** Pyrogram
+**🧰 Framework : Pyrogram**
 
-**👨‍💻 Developer:** [Anonymous](https://t.me/Ns_AnoNymouS)
+**👨🏻‍💻 Developer :** [Shadab](https://t.me/Shadab_Alam)
 
-**📮 Channel:** [NS BOT UPDATES](https://t.me/Ns_bot_updates)
-
-**👥 Group:** [NS BOT SUPPOTERS](https://t.me/Ns_Bot_supporters)
-
-**💻 Source Code:**[Press Me](https://github.com/Ns-AnoNymouS/TG-CONVERT-BOT)
-
+**🔍 Channel :** [MS BOT UPDATES](https://t.me/MSBOTCREATERS)
 """
 
 ####################################################################################################################################################
@@ -77,11 +70,11 @@ You access will be revoke by tomorrow"""
 #DON'T CHANGE THE NUMBERS IN THE FLOWER BRACKETS AND THE ORDER OF PERCENTAGE, DONE, TOTAL, SPEED, ETA ONLY CHANGE THE THEME 
 
       PROGRESS = """
-Percentage : {0}%
-Done ✅: {1}
-Total 🌀: {2}
-Speed 🚀: {3}/s
-ETA 🕰: {4}
+💠 Percentage : {0}%
+✅ Done : {1}
+🔍 Total : {2}
+💥 Speed : {3}/s
+⌛ Time Left : {4}
 """
        
       DOWNLOAD_PROGRESS = "▪️"
@@ -92,11 +85,11 @@ ETA 🕰: {4}
 
 
 
-      DOWNLOAD_START = "Trying to Download 📥"
-      DOWNLOAD_COMPLETE = "✅ Media Downloaded successfully\nPreparing for upload"
-      UPLOAD_START = "Trying to Upload 📤"
-      UPLOAD_COMPLETE = "THANKS FOR USING ME"
-      SAVED_CUSTOM_THUMB_NAIL = "✅ Saved Thumbnail Successfully. This will be deleted in 24hrs"
-      BANNED_TEXT = "YOU ARE BANNED. SO YOUR ARE NOT ABLE TO USE ME 🐒"
-      REPLY_TEXT = "👩‍✈️ Reply to the media which you need to convert"
-      DEL_ETED_CUSTOM_THUMB_NAIL = "Thumbnail Deleted Successfully ✅"
+      DOWNLOAD_START = "📥 Trying to Download In Bot Server."
+      DOWNLOAD_COMPLETE = "✅ Media Downloaded Successfully.\n📤 Preparing For Upload."
+      UPLOAD_START = "📤 Trying to Upload..."
+      UPLOAD_COMPLETE = "😊 Thanks For Using Our Bot."
+      SAVED_CUSTOM_THUMB_NAIL = "✅ Saved Thumbnail Successfully. This Will Be Deleted In 24 Hours."
+      BANNED_TEXT = "⛔ You Are Banned. So Your Are Not Able To Use Me."
+      REPLY_TEXT = "💥 Reply To The Media Which You Need To Convert."
+      DEL_ETED_CUSTOM_THUMB_NAIL = "🗑 Thumbnail Deleted Successfully."
