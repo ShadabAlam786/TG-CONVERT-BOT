@@ -14,15 +14,33 @@ from Tools.Download import download
 my_father = "https://t.me/Shadab_Alam"
 support = "https://telegram.dog/MSBOTCREATERS"
 
-@Client.on_message(Filters.command(["start"]))
-async def start(c, m):
+@Client.on_message(Filters.command(["start"]) & Filters.incoming & Filters.private)
 
-    await c.send_message(chat_id=m.chat.id,
-                         text=Translation.START.format(m.from_user.first_name, Config.USER_NAME),
-                         reply_to_message_id=m.message_id,
-                         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("👨🏻‍💻 My Father", url=my_father), InlineKeyboardButton("🔍 Support Channel", url=support)],[InlineKeyboardButton("💠 Help", callback_data="help"),InlineKeyboardButton("⁉️ About", callback_data="about")]]))
-    logger.info(f"{m.from_user.first_name} Used Start Command.")
+async def start(c, m, cb=False):
 
+    if not cb:
+
+        send_msg = await m.reply_text("**Processing...**", quote=True)
+        
+        if cb:
+
+        return await m.message.edit(
+
+                   text=Translation.START.format(m.from_user.first_name, Config.USER_NAME),,
+
+                   reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("👨🏻‍💻 My Father", url=my_father), InlineKeyboardButton("🔍 Support Channel", url=support)],[InlineKeyboardButton("💠 Help", callback_data="help"),InlineKeyboardButton("⁉️ About", callback_data="about")]]))
+
+      
+     
+        else: # sending start message
+
+        await send_msg.edit(
+
+            text=text,
+
+            reply_markup=InlineKeyboardMarkup(buttons)
+
+        )
 
 
 @Client.on_message(Filters.command(["help"]))
