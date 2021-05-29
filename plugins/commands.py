@@ -20,8 +20,8 @@ async def start(c, m):
     await c.send_message(chat_id=m.chat.id,
                          text=Translation.START.format(m.from_user.first_name, Config.USER_NAME),
                          reply_to_message_id=m.message_id,
-                         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("👨🏻‍💻 My Father", url=my_father), InlineKeyboardButton("🔍 Support Channel", url=support)]]))
-    logger.info(f"{m.from_user.first_name} used start command")
+                         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("👨🏻‍💻 My Father", url=my_father), InlineKeyboardButton("🔍 Support Channel", url=support)],[InlineKeyboardButton("💠 Help", command="help")]]))
+    logger.info(f"{m.from_user.first_name} Used Start Command.")
 
 
 
