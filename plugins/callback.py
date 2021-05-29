@@ -18,8 +18,19 @@ async def help_cb(c, m):
   await m.answer() 
   
   # help text 
-  help_text = """**You need Help?? 🧐
-  **★ Just send me the files i will store file and give you share able link**You can use me in channel too 😉**★ Make me admin in your channel with edit permission. Thats enough now continue uploading files in channel i will edit all posts and add share able link url buttons""" 
+  help_text = """**💥 Hey You Need Help ?**
+
+**1. Send Me The Telegram File Or Video Which You Wanted To Convert.
+
+2. Send Me The Thumbnail [ Photo ]. [ Optional ]
+
+3. Reply To Video /CTF For Converting Into File.
+
+4. Reply To File /CTV For Converting Into Video.**
+
+**🔍 Support Channel :** [MS Bot Updates](https://telegram.dog/MSBOTCREATERS)
+
+"""
   
   # creating buttons 
   buttons = [ [ InlineKeyboardButton('🏠 Home', callback_data='home'), InlineKeyboardButton('⁉️ About', callback_data='about') ], [ InlineKeyboardButton('💠 Close', callback_data='close') ] ] 
@@ -45,28 +56,19 @@ async def about_cb(c, m):
 
     # about text
 
-    about_text = f"""--**My Details:**--
+    about_text = """
 
-🤖 𝐌𝐲 𝐍𝐚𝐦𝐞: {bot.mention(style='md')}
+**📝 Language : Python 3**
 
-    
+**🧰 Framework : Pyrogram**
 
-📝 𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞: [Python 3](https://www.python.org/)
+**👨🏻‍💻 Developer :** [Shadab](https://t.me/Shadab_Alam)
 
-🧰 𝐅𝐫𝐚𝐦𝐞𝐰𝐨𝐫𝐤: [Pyrogram](https://github.com/pyrogram/pyrogram)
-
-👨‍💻 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫: {owner.mention(style='md')}
-
-📢 𝐂𝐡𝐚𝐧𝐧𝐞𝐥: [NS BOT UPDATES](https://t.me/Ns_bot_updates)
-
-👥 𝐆𝐫𝐨𝐮𝐩: [Ns BOT SUPPORT](https://t.me/Ns_Bot_supporters)
-
-🌐𝐒𝐨𝐮𝐫𝐜𝐞 𝐂𝐨𝐝𝐞: [Press Me 🥰](https://github.com/Ns-Bots/TG-File-Store)
+**🔍 Channel :** [MS BOT UPDATES](https://t.me/MSBOTCREATERS)
 
 """
     
     # creating buttons
-
     buttons = [
 
         [
@@ -104,29 +106,3 @@ async def home_cb(c, m):
     await m.answer()
 
     await start(c, m, cb=True)
-
-@Client.on_callback_query(filters.regex('^done$'))
-
-async def done_cb(c, m):
-
-    BATCH.remove(m.from_user.id)
-
-    c.cancel_listener(m.from_user.id)
-
-    await m.message.delete()
-
-@Client.on_callback_query(filters.regex('^delete'))
-
-async def delete_cb(c, m):
-
-    await m.answer()
-
-    cmd, msg_id = m.data.split("+")
-
-    chat_id = m.from_user.id if not DB_CHANNEL_ID else int(DB_CHANNEL_ID)
-
-    message = await c.get_messages(chat_id, int(msg_id))
-
-    await message.delete()
-
-    await m.message.edit("Deleted files successfully 👨‍✈️")
