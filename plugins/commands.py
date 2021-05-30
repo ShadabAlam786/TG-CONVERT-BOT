@@ -18,19 +18,16 @@ support = "https://telegram.dog/MSBOTCREATERS"
 async def start(c, m, cb=False):
 
     if not cb:
-
-        send_msg = await m.reply_text("**Processing...**", quote=True)
+      send_msg = await m.reply_text("**Processing...**", quote=True)
         
         if cb:
-
-        await m.message.edit(
+         return await m.message.edit(
                      text=Translation.START.format(m.from_user.first_name, Config.USER_NAME)
                      reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("👨🏻‍💻 My Father", url=my_father), InlineKeyboardButton("🔍 Support Channel", url=support)],[InlineKeyboardButton("💠 Help", callback_data="help"),InlineKeyboardButton("⁉️ About", callback_data="about")]]))
 
       
      
         else: # sending start message
-
         await send_msg.edit(
               text=Translation.START.format(m.from_user.first_name,
               reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("👨🏻‍💻 My Father", url=my_father), InlineKeyboardButton("🔍 Support Channel", url=support)],[InlineKeyboardButton("💠 Help", callback_data="help"),InlineKeyboardButton("⁉️ About", callback_data="about")]]))
