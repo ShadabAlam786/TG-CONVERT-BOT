@@ -31,21 +31,25 @@ async def help_cb(c, m):
 """
   
   # creating buttons 
-  buttons = [ [ InlineKeyboardButton('🏠 Home', callback_data='home'), InlineKeyboardButton('⁉️ About', callback_data='about') ], [ InlineKeyboardButton('💠 Close', callback_data='close') ] ] 
+  buttons = [[
+      InlineKeyboardButton('🏠 Home', callback_data='home'),
+      InlineKeyboardButton('⁉️ About', callback_data='about')
+      ],[
+      InlineKeyboardButton('💠 Close', callback_data='close')
+  ]] 
   
   # editing as help message 
-  await m.message.edit( text=help_text, 
-                       reply_markup=InlineKeyboardMarkup(buttons) ) 
+  await m.message.edit(text=help_text, 
+                       reply_markup=InlineKeyboardMarkup(buttons)) 
   
-  @Client.on_callback_query(Filters.regex('^close$'))
-  async def close_cb(c, m): 
+@Client.on_callback_query(Filters.regex('^close$'))
+async def close_cb(c, m): 
     await m.message.delete() 
     await m.message.reply_to_message.delete()
  
 
-  @Client.on_callback_query(Filters.regex('^about$'))
-
-  async def about_cb(c, m):
+@Client.on_callback_query(Filters.regex('^about$'))
+async def about_cb(c, m):
 
     await m.answer()
 
@@ -91,14 +95,10 @@ async def help_cb(c, m):
 
     # editing message
 
-   await m.message.edit(
-
+    await m.message.edit(
                     text=about_text,
-
                     reply_markup=InlineKeyboardMarkup(buttons),
-
                     disable_web_page_preview=True
-
     )
 
 @Client.on_callback_query(Filters.regex('^home$'))
