@@ -26,7 +26,7 @@ async def help_cb(c, m):
 
 4. Reply To File /CTV For Converting Into Video.**
 
-**🔍 Support Channel :** [MS Bot Updates](https://telegram.dog/MSBOTCREATERS)
+**🔍 Oficial Channel :** [MS Bot Updates](https://telegram.dog/MSBOTCREATERS)
 
 """
   
@@ -42,12 +42,17 @@ async def help_cb(c, m):
     await m.message.delete() 
     await m.message.reply_to_message.delete()
  
+
   @Client.on_callback_query(Filters.regex('^about$'))
+
   async def about_cb(c, m):
+
     await m.answer()
+
     
 
     # about text
+
     about_text = """
 
 **📝 Language : Python 3**
@@ -56,11 +61,16 @@ async def help_cb(c, m):
 
 **👨🏻‍💻 Developer :** [Shadab](https://t.me/Shadab_Alam)
 
-**🔍 Channel :** [MS BOT UPDATES](https://t.me/MSBOTCREATERS)
+**🔍 Official Channel :** [MS BOT UPDATES](https://t.me/MSBOTCREATERS)
+
+**💠 Support Channel :** [Support Channel](https://t.me/Ns_bot_updates)
 
 """
+
     
+
     # creating buttons
+
     buttons = [
 
         [
@@ -80,10 +90,15 @@ async def help_cb(c, m):
     ]
 
     # editing message
+
    await m.message.edit(
+
                     text=about_text,
+
                     reply_markup=InlineKeyboardMarkup(buttons),
+
                     disable_web_page_preview=True
+
     )
 
 @Client.on_callback_query(Filters.regex('^home$'))
