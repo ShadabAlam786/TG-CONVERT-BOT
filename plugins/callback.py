@@ -45,11 +45,9 @@ async def help_cb(c, m):
   @Client.on_callback_query(Filters.regex('^about$'))
   async def about_cb(c, m):
     await m.answer()
-    owner = await c.get_users(int(OWNER_ID))
-    bot = await c.get_me()
+    
 
     # about text
-
     about_text = """
 
 **📝 Language : Python 3**
@@ -82,16 +80,9 @@ async def help_cb(c, m):
     ]
 
     # editing message
-
-    await m.message.edit(
-
-        text=about_text,
-
-        reply_markup=InlineKeyboardMarkup(buttons),
-
-        disable_web_page_preview=True
-
-    )
+     await m.message.edit(text=about_text,
+                          reply_markup=InlineKeyboardMarkup(buttons),
+                          disable_web_page_preview=True)
 
 @Client.on_callback_query(Filters.regex('^home$'))
 async def home_cb(c, m):
