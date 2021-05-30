@@ -80,7 +80,7 @@ async def help_cb(c, m):
     ]
 
     # editing message
-     await m.message.edit(text=about_text,
+   await m.message.edit(text=about_text,
                           reply_markup=InlineKeyboardMarkup(buttons),
                           disable_web_page_preview=True)
 
