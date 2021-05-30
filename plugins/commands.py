@@ -52,7 +52,7 @@ async def start(c, m, cb=False):
 
     else: # sending start message
 
-        await send_msg.edit(text=text, reply_markup=InlineKeyboardMarkup(buttons))
+        await send_msg.edit(text=Translation.START.format(m.from_user.first_name, Config.USER_NAME), reply_markup=InlineKeyboardMarkup(buttons))
     
       
      
