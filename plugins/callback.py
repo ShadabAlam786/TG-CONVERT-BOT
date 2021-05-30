@@ -80,9 +80,11 @@ async def help_cb(c, m):
     ]
 
     # editing message
-   await m.message.edit(text=about_text,
-                          reply_markup=InlineKeyboardMarkup(buttons),
-                          disable_web_page_preview=True)
+   await m.message.edit(
+                    text=about_text,
+                    reply_markup=InlineKeyboardMarkup(buttons),
+                    disable_web_page_preview=True
+    )
 
 @Client.on_callback_query(Filters.regex('^home$'))
 async def home_cb(c, m):
