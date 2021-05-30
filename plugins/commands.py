@@ -14,23 +14,49 @@ from Tools.Download import download
 my_father = "https://t.me/Shadab_Alam"
 support = "https://telegram.dog/MSBOTCREATERS"
 
-@Client.on_message(Filters.command(["start"]) & Filters.incoming & Filters.private)
-async def start(c, m, cb=False):
+@Client.on_message(Filters.command("start") & Filters.incoming & Filters.private)
 
-    if not cb:
-      send_msg = await m.reply_text("**Processing...**", quote=True)
-        
-    if cb:
-      return await m.message.edit(
-                     text=Translation.START.format(m.from_user.first_name, Config.USER_NAME)
-                     reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("👨🏻‍💻 My Father", url=my_father), InlineKeyboardButton("🔍 Support Channel", url=support),InlineKeyboardButton("💠 Help", callback_data="help"),InlineKeyboardButton("⁉️ About", callback_data="about")]]))
+async def start(c, m, cb=False): 
 
+    if not cb: 
+
+        send_msg = await m.reply_text("Processing...", quote=True) 
+
+    buttons = [[
+
+        InlineKeyboardButton("👨🏻‍💻 My Father", url=my_father),
+
+        InlineKeyboardButton("🔍 Support Channel", url=support)
+
+        ],[
+
+        InlineKeyboardButton("💠 Help", callback_data="help"),
+
+        InlineKeyboardButton("⁉️ About", callback_data="about") 
+
+    ]]
+
+    if cb: 
+
+        await m.message.edit(
+
+            text=Translation.START.format(m.from_user.first_name, Config.USER_NAME),
+
+            reply_markup=InlineKeyboardMarkup(buttons)
+
+        )
+
+        return
+
+    
+
+    else: # sending start message
+
+        await send_msg.edit(text=text, reply_markup=InlineKeyboardMarkup(buttons))
+    
       
      
-     else: # sending start message
-      await send_msg.edit(
-              text=Translation.START.format(m.from_user.first_name,
-              reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("👨🏻‍💻 My Father", url=my_father), InlineKeyboardButton("🔍 Support Channel", url=support),InlineKeyboardButton("💠 Help", callback_data="help"),InlineKeyboardButton("⁉️ About", callback_data="about")]]))
+
 
 
 @Client.on_message(Filters.command(["help"]))
