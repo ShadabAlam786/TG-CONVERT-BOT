@@ -17,12 +17,12 @@ async def upload_video(c, m, send, media_location, thumb_image_path, duration, w
          await c.send_video(
                 chat_id=m.chat.id,
                 video=media_location,
-                caption="\n\n© @Convert_MS_Bot",
                 duration=duration,
                 width=width,
                 height=height,
                 supports_streaming=True,
                 thumb=thumb_image_path,
+                caption="\n\n**© @Convert_MS_Bot**",
                 reply_to_message_id=m.reply_to_message.message_id,
                 progress=progress_for_pyrogram,
                 progress_args=(
@@ -35,8 +35,8 @@ async def upload_video(c, m, send, media_location, thumb_image_path, duration, w
          await c.send_document(
                 chat_id=m.chat.id,
                 document=media_location,
-                caption="\n\n© @Convert_MS_Bot",
                 thumb=thumb_image_path,
+                caption="\n\n**© @Convert_MS_Bot**",
                 reply_to_message_id=m.reply_to_message.message_id,
                 progress=progress_for_pyrogram,
                 progress_args=(
