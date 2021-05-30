@@ -9,11 +9,11 @@
 ## COMMANDS
 ### AVAILABLE COMMANDS 
 ```
-start - Check Whether Bot Is Alive.
+Start - Check Whether Bot Is Alive.
 
 CTV - Reply To The Media For Converting Into Video.
 
-CTV - Reply To The Media For Converting Into File.
+CTF - Reply To The Media For Converting Into File.
 
 Help - Get Info For How To Use Bot.
 
